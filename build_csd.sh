@@ -12,7 +12,7 @@ set -ex
 JARNAME=LIVY-$1.jar
 
 # validate service description
-java -jar ~/github/cloudera/cm_ext/validator/target/validator.jar -s ./csd-src/descriptor/service.sdl
+java -jar ~/Sites/git/cm_ext/validator/target/validator.jar -s ./csd-src/descriptor/service.sdl
 
 jar -cvf ./$JARNAME -C ./csd-src .
 echo "Created $JARNAME"
