@@ -27,10 +27,12 @@ cd ../
 [ ! -d ./$PARCEL_DIR ] && rm -rf ./$PARCEL_DIR
 
 mkdir -p ./$PARCEL_DIR/jars
+mkdir -p ./$PARCEL_DIR/repl-jars
 
 cp -r ./livy/bin ./$PARCEL_DIR/
 cp -r ./livy/conf ./$PARCEL_DIR/
 cp ./livy/server/target/jars/*.jar ./$PARCEL_DIR/jars/
+cp ./livy/repl/target/jars/*.jar ./$PARCEL_DIR/repl-jars/
 
 # Download logback jar
 wget -O ./$PARCEL_DIR/jars/logback-classic.jar http://central.maven.org/maven2/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar
